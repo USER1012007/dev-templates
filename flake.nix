@@ -114,39 +114,9 @@
         templates = rec {
           default = empty;
 
-          bun = {
-            path = ./bun;
-            description = "Bun development environment";
-          };
-
           c-cpp = {
             path = ./c-cpp;
             description = "C/C++ development environment";
-          };
-
-          clojure = {
-            path = ./clojure;
-            description = "Clojure development environment";
-          };
-
-          cue = {
-            path = ./cue;
-            description = "Cue development environment";
-          };
-
-          dhall = {
-            path = ./dhall;
-            description = "Dhall development environment";
-          };
-
-          elixir = {
-            path = ./elixir;
-            description = "Elixir development environment";
-          };
-
-          elm = {
-            path = ./elm;
-            description = "Elm development environment";
           };
 
           empty = {
@@ -154,19 +124,9 @@
             description = "Empty dev template that you can customize at will";
           };
 
-          gleam = {
-            path = ./gleam;
-            description = "Gleam development environment";
-          };
-
           go = {
             path = ./go;
             description = "Go (Golang) development environment";
-          };
-
-          hashi = {
-            path = ./hashi;
-            description = "HashiCorp DevOps tools development environment";
           };
 
           haskell = {
@@ -194,21 +154,6 @@
             description = "LaTeX development environment";
           };
 
-          lean4 = {
-            path = ./lean4;
-            description = "Lean 4 development environment";
-          };
-
-          nickel = {
-            path = ./nickel;
-            description = "Nickel development environment";
-          };
-
-          nim = {
-            path = ./nim;
-            description = "Nim development environment";
-          };
-
           nix = {
             path = ./nix;
             description = "Nix development environment";
@@ -219,44 +164,9 @@
             description = "Node.js development environment";
           };
 
-          ocaml = {
-            path = ./ocaml;
-            description = "OCaml development environment";
-          };
-
-          odin = {
-            path = ./odin;
-            description = "Odin development environment";
-          };
-
-          opa = {
-            path = ./opa;
-            description = "Open Policy Agent development environment";
-          };
-
           php = {
             path = ./php;
             description = "PHP development environment";
-          };
-
-          platformio = {
-            path = ./platformio;
-            description = "PlatformIO development environment";
-          };
-
-          protobuf = {
-            path = ./protobuf;
-            description = "Protobuf development environment";
-          };
-
-          pulumi = {
-            path = ./pulumi;
-            description = "Pulumi development environment";
-          };
-
-          purescript = {
-            path = ./purescript;
-            description = "Purescript development environment";
           };
 
           python = {
@@ -289,11 +199,6 @@
             description = "Shell script development environment";
           };
 
-          swi-prolog = {
-            path = ./swi-prolog;
-            description = "Swi-prolog development environment";
-          };
-
           swift = {
             path = ./swift;
             description = "Swift development environment";
@@ -302,16 +207,6 @@
           typst = {
             path = ./typst;
             description = "Typst development environment";
-          };
-
-          vlang = {
-            path = ./vlang;
-            description = "Vlang developent environment";
-          };
-
-          zig = {
-            path = ./zig;
-            description = "Zig development environment";
           };
 
           # Aliases
