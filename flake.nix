@@ -114,9 +114,14 @@
         templates = rec {
           default = empty;
 
-          c-cpp = {
-            path = ./c-cpp;
-            description = "C/C++ development environment";
+          c = {
+            path = ./c;
+            description = "C development environment";
+          };
+
+          cpp = {
+            path = ./cpp;
+            description = "C++ development environment";
           };
 
           empty = {
@@ -208,10 +213,6 @@
             path = ./typst;
             description = "Typst development environment";
           };
-
-          # Aliases
-          c = c-cpp;
-          cpp = c-cpp;
         };
       };
 }
