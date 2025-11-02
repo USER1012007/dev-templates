@@ -2,20 +2,14 @@
 
 [![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
 
-To initialize (where `${ENV}` is listed in the table below):
-
-```shell
-nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#${ENV}"
-```
-
 Here's an example (for the [`rust`](./rust) template):
 
 ```shell
 # Initialize in the current project
-nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#rust"
+nix flake init -t github:user1012007/dev-templates#rust
 
 # Create a new project
-nix flake new --template "https://flakehub.com/f/the-nix-way/dev-templates/*#rust" ${NEW_PROJECT_DIRECTORY}
+nix flake new -t github:user1012007/dev-templates#rust ${NEW_PROJECT_DIRECTORY}
 ```
 
 ## How to use the templates
@@ -29,54 +23,29 @@ Once your preferred template has been initialized, you can use the provided shel
 
 | Language/framework/tool          | Template                              |
 | :------------------------------- | :------------------------------------ |
-| [Bun]                            | [`bun`](./bun/)                       |
 | [C] / [C++]                      | [`c-cpp`](./c-cpp/)                   |
-| [Clojure]                        | [`clojure`](./clojure/)               |
-| [Cue]                            | [`cue`](./cue/)                       |
-| [Dhall]                          | [`dhall`](./dhall/)                   |
-| [Elixir]                         | [`elixir`](./elixir/)                 |
-| [Elm]                            | [`elm`](./elm/)                       |
 | Empty (change at will)           | [`empty`](./empty)                    |
-| [Gleam]                          | [`gleam`](./gleam/)                   |
 | [Go]                             | [`go`](./go/)                         |
-| [Hashicorp] tools                | [`hashi`](./hashi/)                   |
 | [Haskell]                        | [`haskell`](./haskell/)               |
-| [Haxe]                           | [`haxe`](./haxe/)                     |
 | [Java]                           | [`java`](./java/)                     |
 | [Jupyter]                        | [`jupyter`](./jupyter/)               |
 | [Kotlin]                         | [`kotlin`](./kotlin/)                 |
 | [LaTeX]                          | [`latex`](./latex/)                   |
-| [Nickel]                         | [`nickel`](./nickel/)                 |
-| [Nim]                            | [`nim`](./nim/)                       |
 | [Nix]                            | [`nix`](./nix/)                       |
 | [Node.js][node]                  | [`node`](./node/)                     |
-| [OCaml]                          | [`ocaml`](./ocaml/)                   |
-| [Odin]                           | [`odin`](./odin/)                     |
-| [Open Policy Agent][opa]         | [`opa`](./opa)                        |
 | [PHP]                            | [`php`](./php/)                       |
-| [PlatformIO]                     | [`platformio`](./platformio/)         |
-| [Protobuf]                       | [`protobuf`](./protobuf/)             |
-| [Pulumi]                         | [`pulumi`](./pulumi/)                 |
-| [Purescript]                     | [`purescript`](./purescript/)         |
 | [Python]                         | [`python`](./python/)                 |
 | [R]                              | [`r`](./r/)                           |
 | [Ruby]                           | [`ruby`](./ruby/)                     |
 | [Rust]                           | [`rust`](./rust/)                     |
 | [Scala]                          | [`scala`](./scala/)                   |
 | Shell                            | [`shell`](./shell/)                   |
-| [SWI-prolog]                     | [`swi-prolog`](./swi-prolog/)         |
 | [Swift]                          | [`swift`](./swift)                    |
 | [Typst]                          | [`typst`](./typst/)                   |
-| [Vlang]                          | [`vlang`](./vlang/)                   |
-| [Zig]                            | [`zig`](./zig/)                       |
 
 ## Template contents
 
 The sections below list what each template includes. In all cases, you're free to add and remove packages as you see fit; the templates are just boilerplate.
-
-### [`bun`](./bun/)
-
-- [bun]
 
 ### [`c-cpp`](./c-cpp/)
 
@@ -92,46 +61,6 @@ The sections below list what each template includes. In all cases, you're free t
 - [vcpkg]
 - [vcpkg-tool]
 
-### [`clojure`](./clojure/)
-
-- [Clojure]
-- [Boot]
-- [Leiningen]
-
-### [`cue`](./cue/)
-
-- [Cue]
-
-### [`dhall`](./dhall)
-
-- [Dhall]
-- [dhall-bash]
-- [dhall-docs]
-- [dhall-json]
-- [dhall-lsp-server]
-- [dhall-nix]
-- [dhall-nixpkgs]
-- [dhall-openapi]
-- [dhall-toml]
-- [dhall-yaml]
-
-### [`elixir`](./elixir/)
-
-- [Elixir], including [mix] and [IEx]
-- [gigalixir] (Linux only)
-
-### [`elm`](./elm/)
-
-- [Elm]
-- [elm2nix]
-
-### [Empty](./empty/)
-
-A dev template that's fully customizable.
-
-### [`gleam`](./gleam/)
-
-- [Gleam]
 
 ### [`go`](./go/)
 
@@ -139,27 +68,10 @@ A dev template that's fully customizable.
 - Standard Go tools ([goimports], [godoc], and others)
 - [golangci-lint]
 
-### [`hashi`](./hashi/)
-
-- [Packer]
-- [Terraform]
-- [Nomad]
-- [Vault]
-- [nomad-autoscaler]
-- [nomad-pack]
-- [levant]
-- [damon]
-- [Terragrunt]
-- [tflint]
-
 ### [`haskell`](./haskell/)
 
 - [GHC][haskell]
 - [cabal]
-
-### [`haxe`](./haxe/)
-
-- [Haxe]
 
 ### [`java`](./java/)
 
@@ -183,19 +95,6 @@ A dev template that's fully customizable.
 - [tectonic]
 - [texlab]
 
-### [`lean4`](./lean4/)
-
-- [Lean]
-
-### [`nickel`](./nickel/)
-
-- [Nickel]
-
-### [`nim`](./nim)
-
-- [Nim]
-- [nimble]
-
 ### [`nix`](./nix/)
 
 - [Cachix]
@@ -214,52 +113,10 @@ A dev template that's fully customizable.
 - [Yarn]
 - [node2nix]
 
-### [`ocaml`](./ocaml/)
-
-- [OCaml]
-- [Dune]
-- [odoc]
-- [ocamlformat]
-
-### [`odin`](./odin/)
-
-- [Odin]
-
-### [`opa`](./opa/)
-
-- [Open Policy Agent][opa]
-- [Conftest]
-
 ### [`php`](./php/)
 
 - [PHP]
 - [Composer]
-
-### [`platformio`](./platformio/)
-
-- [PlatformIO]
-
-### [`protobuf`](./protobuf/)
-
-- The [Buf CLI][buf]
-- [protoc][protobuf]
-
-### [`pulumi`](./pulumi/)
-
-- [Pulumi]
-- [Python]
-- [Go]
-- [Node.js][node]
-- [dotnet]
-- [Java] and [Maven]
-- [jq]
-
-### [`purescript`](./purescript/)
-
-- [Purescript] (purs)
-- [Spago]
-- [purescript-language-server]
-- [purs-tidy]
 
 ### [`python`](./python/)
 
@@ -297,10 +154,6 @@ A dev template that's fully customizable.
 
 - [shellcheck]
 
-### [`swi-prolog`](./swi-prolog/)
-
-- [swipl][swi-prolog]
-
 ### [`swift`](./swift/)
 
 - [Swift]
@@ -309,16 +162,6 @@ A dev template that's fully customizable.
 ### [`typst`](./typst/)
 
 - [Typst]
-
-### [`vlang`](./vlang/)
-
-- [Vlang]
-
-### [`zig`](./zig/)
-
-- [Zig]
-- [LLDB]
-- [ZLS]
 
 [boot]: https://boot-clj.com
 [buf]: https://github.com/bufbuild/buf
